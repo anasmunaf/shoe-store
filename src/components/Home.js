@@ -1,14 +1,7 @@
 /** @format */
 
 import React from "react";
-import {
-  Card,
-  CardContent,
-  Container,
-  Grid,
-  Typography,
-} from "@material-ui/core";
-import Cards from "./card";
+import { Container, Grid, Typography } from "@material-ui/core";
 import CarouselCard from "./carousel";
 import { makeStyles } from "@material-ui/core/styles";
 import Category from "./category";
@@ -24,8 +17,8 @@ const Home = () => {
 
   return (
     <Container maxWidth='xl'>
-      <Grid container direction='column' alignItems='center' spacing={7}>
-        <Grid item xs={12} md={7}>
+      <Grid container direction='column' alignItems='center' spacing={5}>
+        <Grid item xs={12} md={8}>
           <CarouselCard />
         </Grid>
         <Grid container item xs={12} md={8} alignItems='stretch'>
@@ -35,7 +28,11 @@ const Home = () => {
           <SaleSection />
         </Grid>
         <Grid item xs={12} md={8}>
-          <Typography variant={"h5"} style={{ fontWeight: "bolder" }}>
+          <Typography
+            variant={"h4"}
+            color='secondary'
+            style={{ fontWeight: "bolder" }}
+          >
             Shop Our Top Brands
           </Typography>
         </Grid>

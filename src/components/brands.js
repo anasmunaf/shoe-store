@@ -11,31 +11,31 @@ const Brands = () => {
 
   return (
     <Grid container direction='row' justifyContent='space-between' spacing={3}>
-      <Grid item xs={12} md={3}>
+      <Grid item xs={6} md={3}>
         <Cards
           image={
-            "http://cdn.shopify.com/s/files/1/1417/8980/files/Nike_large.jpg?v=1593973039"
+            "https://seeklogo.com/images/A/adidas-logo-49D5BEBA90-seeklogo.com.png"
           }
         />
       </Grid>
-      <Grid item xs={12} md={3}>
+      <Grid item xs={6} md={3}>
         <Cards
           image={
-            "https://jefflopilato.files.wordpress.com/2017/03/screen-shot-2017-03-26-at-7-31-10-pm.png?w=1400"
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUUSmI81EHqV8LUFcCrY-i3Vf2DlFOrBTpMA&usqp=CAU"
           }
         />
       </Grid>
-      <Grid item xs={12} md={3}>
+      <Grid item xs={6} md={3}>
         <Cards
           image={
-            "https://i.pinimg.com/originals/91/39/56/9139562d0b33e1145eaec585622c393d.jpg"
+            "https://www.seekpng.com/png/detail/343-3439713_timberland-timberland-logo-png.png"
           }
         />
       </Grid>
-      <Grid item xs={12} md={3}>
+      <Grid item xs={6} md={3}>
         <Cards
           image={
-            "https://www.kindpng.com/picc/m/47-478098_converse-logo-converse-logo-transparent-background-hd-png.png"
+            "https://i.pinimg.com/236x/62/cb/bb/62cbbbe48876c60c2eda6f45fe03c21d--puma.jpg"
           }
         />
       </Grid>
