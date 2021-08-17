@@ -5,21 +5,22 @@ import React from "react";
 import ListItems from "./listItems";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { db } from "../db/product";
 
-const db = async () => {
-  const response = await axios.get("http://localhost:3001/db");
-  return response.data;
-};
+// const db = async () => {
+//   const response = await axios.get("http://localhost:3001/db");
+//   return response.data;
+// };
 
 const Kids = () => {
-  let [data, setData] = useState([]);
-  useEffect(() => {
-    db().then((res) => {
-      setData(res.db);
-    });
-  }, []);
+  //   let [data, setData] = useState([]);
+  //   useEffect(() => {
+  //     db().then((res) => {
+  //       setData(res.db);
+  //     });
+  //   }, []);
 
-  let women = data.filter((item) => {
+  let kids = db.filter((item) => {
     return item.productGender === "kids" ? item : null;
   });
   return (
@@ -27,7 +28,7 @@ const Kids = () => {
       <Typography variant={"h3"} color={"textSecondary"} align='center'>
         KIDS
       </Typography>
-      <ListItems data={women} />
+      <ListItems data={kids} />
     </Container>
   );
 };
