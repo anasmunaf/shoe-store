@@ -17,14 +17,14 @@ const Home = () => {
 
   return (
     <Container maxWidth='xl'>
-      <Grid container direction='column' alignItems='center' spacing={5}>
+      <Grid container direction='column' alignItems='center' spacing={6}>
         <Grid item xs={12} md={8}>
           <CarouselCard />
         </Grid>
         <Grid container item xs={12} md={8} alignItems='stretch'>
           <Category />
         </Grid>
-        <Grid container item xs={12} md={8}>
+        <Grid container item xs={12} md={10}>
           <SaleSection />
         </Grid>
         <Grid item xs={12} md={8}>
@@ -36,7 +36,7 @@ const Home = () => {
             Shop Our Top Brands
           </Typography>
         </Grid>
-        <Grid container item xs={12} md={8}>
+        <Grid container item xs={12} md={10}>
           <Brands />
         </Grid>
       </Grid>

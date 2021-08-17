@@ -27,8 +27,8 @@ const Category = () => {
       <CardContent className={classes.root}>
         <Typography className={classes.typo}>
           <NavLink
-            to='/'
-            activeStyle={{
+            to='/women'
+            style={{
               fontWeight: "bold",
               color: "black",
             }}
@@ -38,8 +38,8 @@ const Category = () => {
         </Typography>
         <Typography className={classes.typo}>
           <NavLink
-            to='/'
-            activeStyle={{
+            to='/men'
+            style={{
               fontWeight: "bold",
               color: "black",
             }}
@@ -49,8 +49,8 @@ const Category = () => {
         </Typography>
         <Typography className={classes.typo}>
           <NavLink
-            to='/'
-            activeStyle={{
+            to='/kids'
+            style={{
               fontWeight: "bold",
               color: "black",
             }}

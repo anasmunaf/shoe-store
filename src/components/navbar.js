@@ -19,7 +19,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
-
+import { NavLink } from "react-router-dom";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -80,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar() {
+export default function Navbar(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -149,14 +149,26 @@ export default function Navbar() {
         </div>
         <Divider />
         <List>
-          {["Women Shoes", "Men Shoes", "Kids Shoes"].map((text, index) => (
-            <ListItem color='secondary' button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText style={{ color: "#d50000" }} primary={text} />
-            </ListItem>
-          ))}
+          {["Home", "Women Shoes", "Men Shoes", "Kids Shoes"].map(
+            (text, index) => (
+              <ListItem color='secondary' button key={text}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <NavLink
+                  to={props.paths[index]}
+                  style={{
+                    fontWeight: "bold",
+                    color: "#d50000",
+                    textDecoration: "none",
+                  }}
+                >
+                  {text}
+                </NavLink>
+                {/* <ListItemText style={{ color: "#d50000" }} primary={text} /> */}
+              </ListItem>
+            ),
+          )}
         </List>
       </Drawer>
     </div>
