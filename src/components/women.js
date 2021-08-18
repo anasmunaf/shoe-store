@@ -23,8 +23,13 @@ const Women = () => {
   });
   return (
     <Container maxWidth='xl'>
-      <Typography variant={"h3"} color={"textSecondary"} align='center'>
-        Women
+      <Typography
+        variant={"h3"}
+        align='center'
+        gutterBottom
+        style={{ fontWeight: "600", color: "#794037" }}
+      >
+        WOMEN
       </Typography>
       <ListItems data={women} />
     </Container>
