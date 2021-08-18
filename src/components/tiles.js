@@ -9,6 +9,9 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Fab from "@material-ui/core/Fab";
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 const useStyles = makeStyles({
   root: {
     // marginBottom: 20,
@@ -23,20 +26,25 @@ const Tiles = (props) => {
   return (
     <div>
       <Card className={classes.root}>
-        <CardActionArea>
+        <CardActionArea disableRipple>
           <CardMedia className={classes.media} image={props.url} />
           <CardContent>
-            <Typography
-              gutterBottom
-              variant='h5'
-              component='h2'
-              display='inline'
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Typography gutterBottom variant='h5' component='h2'>
+                {props.name}
+              </Typography>
+              <Typography gutterBottom variant='h5' component='h2'>
+                Price: ${props.price}
+              </Typography>
+            </div>
+            <Button
+              variant='contained'
+              color='secondary'
+              fullWidth
+              style={{ fontWeight: "bold" }}
             >
-              {props.name}
-            </Typography>
-            <Typography gutterBottom variant='h6' component='h2' align='right'>
-              PRICE: ${props.price}
-            </Typography>
+              ADD TO CART
+            </Button>
           </CardContent>
         </CardActionArea>
         {/* <CardActions>
